@@ -1,2 +1,4 @@
 target
 .settings
+react-client/node_modules/*
+dist
