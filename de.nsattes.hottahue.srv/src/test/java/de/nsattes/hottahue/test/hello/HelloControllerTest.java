@@ -1,4 +1,4 @@
-package de.nsattes.hottahue.controllers;
+package de.nsattes.hottahue.test.hello;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertNotNull;
@@ -17,14 +17,14 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import de.nsattes.hottahue.spring.boot.AppInitializer;
-import de.nsattes.hottahue.spring.controller.HelloController;
-import de.nsattes.hottahue.spring.service.HelloService;
+import de.nsattes.hottahue.Application;
+import de.nsattes.hottahue.hello.HelloController;
+import de.nsattes.hottahue.hello.HelloService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(HelloController.class)
-@ContextConfiguration(classes = AppInitializer.class)
-public class RestControllerTest {
+@ContextConfiguration(classes = Application.class)
+public class HelloControllerTest {
 
 	@Autowired
 	private MockMvc mvc;

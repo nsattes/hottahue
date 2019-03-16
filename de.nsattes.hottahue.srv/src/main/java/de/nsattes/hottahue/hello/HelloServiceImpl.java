@@ -1,7 +1,6 @@
-package de.nsattes.hottahue.spring.service;
+package de.nsattes.hottahue.hello;
 
 import org.springframework.stereotype.Service;
-import de.nsattes.hottahue.spring.model.HelloModel;
 
 @Service
 public class HelloServiceImpl implements HelloService {

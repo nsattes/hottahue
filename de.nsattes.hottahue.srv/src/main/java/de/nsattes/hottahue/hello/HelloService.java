@@ -1,6 +1,4 @@
-package de.nsattes.hottahue.spring.service;
-
-import de.nsattes.hottahue.spring.model.HelloModel;
+package de.nsattes.hottahue.hello;
 
 public interface HelloService {
 
