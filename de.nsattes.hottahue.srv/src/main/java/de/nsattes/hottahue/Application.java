@@ -1,13 +1,12 @@
-package de.nsattes.hottahue.spring.boot;
+package de.nsattes.hottahue;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AppInitializer extends SpringApplication {
-	
-	public static void main(String args[]) {
-		SpringApplication.run(AppInitializer.class, args);
-	}
+public class Application extends SpringApplication {
 
+	public static void main(String args[]) {
+		SpringApplication.run(Application.class, args);
+	}
 }

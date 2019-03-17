@@ -1,4 +1,4 @@
-package de.nsattes.hottahue.spring.model;
+package de.nsattes.hottahue.hello;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
