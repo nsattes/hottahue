@@ -1,7 +1,6 @@
 package de.nsattes.hottahue.test.hello;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -32,26 +31,17 @@ public class HelloControllerTest {
 	@MockBean
 	private HelloService helloService;
 
-	@Autowired
-	private HelloController controller;
-
-	@Test
-	public void tautology() {
-		assertTrue("Test Setup is not working!", true);
-	}
-
 	@Test
 	public void springContextDoesLoad() {
-		assertNotNull(controller);
+		assertTrue("Test Setup is not working!", true);
 	}
 
 	@Test
 	public void echoShouldReturnInput() throws Exception {
 		String input = "HalloWelt";
-		mvc.perform(get("/echo/" + input)
-				.contentType(MediaType.APPLICATION_JSON))
-			.andExpect(status().isOk())
-			.andExpect(jsonPath("$", is(input)));
+		mvc.perform(get("/echo/" + input).contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$", is(input)));
 	}
 
 }
